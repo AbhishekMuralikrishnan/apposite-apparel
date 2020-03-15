@@ -13,8 +13,8 @@ class SignIn extends React.Component {
         super(props);
 
         this.state = {
-            email: "asdsad@gam.com",
-            password: "asdasafsdafe"
+            email: "",
+            password: ""
         }
     }
 
@@ -30,8 +30,6 @@ class SignIn extends React.Component {
     }
 
     render() {
-        console.log("Render is called")
-        console.log(this.state)
         return (
             <div className="sign-in">
                 <h2>I already have an account</h2>
@@ -42,7 +40,7 @@ class SignIn extends React.Component {
                     {/* <label>Email</label> */}
                     <FormInput name="password" value={this.state.password} type="password" required handleChange= {this.handleChange} label = "Password"/>
                     {/* <label>Password</label> */}
-                    <div class="buttons">
+                    <div className="buttons">
                         <CustomButton type="Submit"> Sign in</CustomButton>
                         <CustomButton onClick={signInWithGoogle} isGoogleSignIn> Sign in with Google </CustomButton>
                     </div>
